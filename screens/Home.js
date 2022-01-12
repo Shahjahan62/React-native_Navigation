@@ -5,7 +5,7 @@ const Home = ({ navigation }) => {
   return (
     <View>
       <TouchableOpacity onPress={() => navigation.navigate("ColorPalette")}>
-        <Text>Click to View the colors</Text>
+        <Text style={styles.text}>Click to View the colors</Text>
       </TouchableOpacity>
     </View>
   );
