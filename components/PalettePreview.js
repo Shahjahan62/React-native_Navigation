@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 10,
     fontWeight: "bold",
+    marginLeft: 10,
   },
   list: {
     flexDirection: "row",
@@ -42,6 +43,8 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     marginRight: 10,
+    borderRadius: 10,
+    marginLeft: 10,
   },
 });
 
