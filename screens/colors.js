@@ -24,12 +24,15 @@ const SOLARIZED = [
 const ColorPalette = () => {
   return (
     <FlatList
+      style={[styles.container]}
       data={SOLARIZED}
       keyExtractor={(item) => item.hexCode}
       renderItem={({ item }) => (
         <Colors name={item.colorName} hexCode={item.hexCode} />
       )}
-      ListHeaderComponent={<Text style={styles.text}>These are colors</Text>}
+      ListHeaderComponent={
+        <Text style={styles.text}>These are Solarized colors</Text>
+      }
     />
   );
 };
@@ -37,10 +40,10 @@ const ColorPalette = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    alignItems: "center",
-    justifyContent: "center",
+    // alignItems: "center",
+    // justifyContent: "center",
     marginBottom: 10,
-    width: 320,
+    width: 360,
     marginBottom: 10,
     borderRadius: 20,
     shadowOffset: { width: 0, height: 2 },
