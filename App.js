@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Colors" component={ColorPalette} />
+        <Stack.Screen name="ColorPalette" component={ColorPalette} />
       </Stack.Navigator>
     </NavigationContainer>
   );
