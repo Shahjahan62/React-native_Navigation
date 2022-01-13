@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+import PalettePreview from "../components/PalettePreview";
 
 const SOLARIZED = [
   { colorName: "Base03", hexCode: "#002b36" },
@@ -55,16 +56,21 @@ const Home = ({ navigation }) => {
         data={COLOR_PALETTES}
         keyExtractor={(item) => item.paletteName}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("ColorPalette", {
-                colorPalette: item.paletteName,
-                colors: item.colors,
-              })
-            }
-          >
-            <Text style={styles.text}>Click to View the colors</Text>
-          </TouchableOpacity>
+          <PalettePreview
+            onPress={() => navigation.navigate("ColorPalette", item)}
+            palette={item}
+          />
+
+          // <TouchableOpacity
+          //   onPress={() =>
+          //     navigation.navigate("ColorPalette", {
+          //       colorPalette: item.paletteName,
+          //       colors: item.colors,
+          //     })
+          //   }
+          // >
+          //   <Text style={styles.text}>Click to View the colors</Text>
+          // </TouchableOpacity>
         )}
       />
     </View>
